@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Moaz El-Gebaly | Data Scientist Portfolio</title>
+  <meta name="description"
+    content="Moaz El-Gebaly - Data Scientist specializing in turning data into actionable insights through machine learning, statistical analysis, and data visualization.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;
+    600;
+    700&amp;
+    family=Inter:wght@300;
+    400;
+    500;
+    600;
+    700&amp;
+    display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-left">
+      <a data-target="#home" role="button" tabindex="0" class="logo"><svg viewbox="0 0 100 100" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 80V40L35 25L50 40L65 25L80 40V80" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <circle cx="35" cy="60" r="5" fill="currentColor"></circle>
+          <circle cx="65" cy="60" r="5" fill="currentColor"></circle>
+        </svg></a>
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <a data-target="#about" role="button" tabindex="0" onclick="closeMobileMenu()">
+            <div class="nav-link-content">
+              <span class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+                  stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-user">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span class="nav-text">About</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a data-target="#education" role="button" tabindex="0" onclick="closeMobileMenu()">
+            <div class="nav-link-content">
+              <span class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+                  stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-graduation-cap">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Education</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a data-target="#skills" role="button" tabindex="0" onclick="closeMobileMenu()">
+            <div class="nav-link-content">
+              <span class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+                  stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-zap">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </span>
+              <span class="nav-text">Skills</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a data-target="#projects" role="button" tabindex="0" onclick="closeMobileMenu()">
+            <div class="nav-link-content">
+              <span class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+                  stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-briefcase">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Projects</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a data-target="#contact" role="button" tabindex="0" onclick="closeMobileMenu()">
+            <div class="nav-link-content">
+              <span class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+                  stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-message-square">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Contact</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="social-links">
+        <a data-href="https://wa.me/201067716431" target="_blank" rel="noopener" aria-label="WhatsApp" role="button"
+          tabindex="0"><svg viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg></a><a data-href="mailto:moaz.elgebaly.25@gmail.com" aria-label="Email" role="button" tabindex="0"><svg
+            viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg></a><a data-href="https://www.linkedin.com/in/moazelgebaly25" target="_blank" rel="noopener"
+          aria-label="LinkedIn" role="button" tabindex="0"><svg viewbox="0 0 24 24" fill="none" stroke="currentcolor"
+            stroke-width="2">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg></a><a data-href="https://github.com/moazelgebaly25" target="_blank" rel="noopener" aria-label="GitHub"
+          role="button" tabindex="0"><svg viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg></a>
+      </div>
+      <div class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+          stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-sun">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+          stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-moon">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </div>
+      <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <div class="social-links">
+          <a href="https://wa.me/201067716431" target="_blank" rel="noopener" aria-label="WhatsApp"><svg
+              viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg></a><a href="mailto:moaz.elgebaly.25@gmail.com" aria-label="Email"><svg viewbox="0 0 24 24"
+              fill="none" stroke="currentcolor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg></a><a href="https://www.linkedin.com/in/moazelgebaly25" target="_blank" rel="noopener"
+            aria-label="LinkedIn"><svg viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg></a><a href="https://github.com/moazelgebaly25" target="_blank" rel="noopener"
+            aria-label="GitHub"><svg viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg></a>
+        </div>
+        <div class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+            stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-sun">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+            stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-moon">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="hero" id="home">
+    <div class="profile-image"><img src="assets/profile.jpg" alt="Moaz El-Gebaly"></div>
+    <h1>Moaz El-Gebaly</h1>
+    <h2>Full-Stack Data Scientist | Turning Data into Actionable Insights</h2>
+  </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <p style="text-align: center; max-width: 800px; margin: 0 auto;">As a passionate data scientist, I love turning raw data into actionable insights that help people make informed decisions and create real impact. My expertise covers the full data lifecycle. I design robust pipelines, deploy machine learning models, and build AI systems to tackle complex challenges. I enjoy creating interactive dashboards and analytics tools that empower teams to make data-driven choices. Collaboration is at the heart of what I do. I thrive on working with diverse teams to innovate, solve problems, and achieve measurable outcomes. Every dataset is an opportunity to uncover hidden patterns, streamline processes, and generate real value. Driven by curiosity and innovation, I am dedicated to using data to solve meaningful problems.</p>
+      <div class="resume-buttons">
+        <a href="assets/Moaz_El-Gebaly_CV.pdf" target="_blank" class="btn-primary"><svg
+            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none"
+            stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-eye">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>View Resume</a><a href="assets/Moaz_El-Gebaly_CV.pdf" download="" class="btn-secondary"><svg
+            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none"
+            stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-download">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>Download Resume</a>
+      </div>
+    </div>
+  </section>
+  <section id="education">
+    <h2>Education & Certifications</h2>
+    <div class="content-grid">
+      <div class="grid-item">
+        <h3>B.Sc. in Computers and Data Sciences</h3>
+        <p>Alexandria University, 2023 - 2027</p>
+      </div>
+      <div class="grid-item">
+        <h3>Android Developer Intern</h3>
+        <p>Digital Egypt Pioneers Initiative - DEPI, 2025</p>
+      </div>
+    </div>
+  </section>
+  <section id="skills">
+    <h2>Skills & Expertise</h2>
+    <div class="content-grid">
+      <div class="grid-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 24 24" fill="none"
+          stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="grid-item-icon feather feather-trending-up">
+          <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+          <polyline points="17 6 23 6 23 12"></polyline>
+        </svg>
+        <h3>Data Analysis</h3>
+        <p style="text-align:center;
+    line-height:1.8;
+    word-spacing:.05em;
+    widows:2;
+    orphans:2">Transform raw data into actionable insights using Python (Pandas, NumPy), MSSQL, and statistical analysis to guide smarter decisions.</p>
+      </div>
+      <div class="grid-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 24 24" fill="none"
+          stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="grid-item-icon feather feather-cpu">
+          <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+          <rect x="9" y="9" width="6" height="6"></rect>
+          <line x1="9" y1="1" x2="9" y2="4"></line>
+          <line x1="15" y1="1" x2="15" y2="4"></line>
+          <line x1="9" y1="20" x2="9" y2="23"></line>
+          <line x1="15" y1="20" x2="15" y2="23"></line>
+          <line x1="20" y1="9" x2="23" y2="9"></line>
+          <line x1="20" y1="14" x2="23" y2="14"></line>
+          <line x1="1" y1="9" x2="4" y2="9"></line>
+          <line x1="1" y1="14" x2="4" y2="14"></line>
+        </svg>
+        <h3>Machine Learning</h3>
+        <p style="text-align:center;
+    line-height:1.8;
+    word-spacing:.05em;
+    widows:2;
+    orphans:2">Build predictive and classification models with Python (scikit-learn) and ML algorithms, automating processes and uncovering patterns.</p>
+      </div>
+      <div class="grid-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 24 24" fill="none"
+          stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="grid-item-icon feather feather-database">
+          <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+          <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+          <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+        </svg>
+        <h3>Data Engineering</h3>
+        <p style="text-align:center;
+    line-height:1.8;
+    word-spacing:.05em;
+    widows:2;
+    orphans:2">Design and maintain ETL pipelines and MSSQL databases for reliable, scalable data workflows.</p>
+      </div>
+      <div class="grid-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 24 24" fill="none"
+          stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="grid-item-icon feather feather-bar-chart">
+          <line x1="12" y1="20" x2="12" y2="10"></line>
+          <line x1="18" y1="20" x2="18" y2="4"></line>
+          <line x1="6" y1="20" x2="6" y2="16"></line>
+        </svg>
+        <h3>Data Visualization</h3>
+        <p style="text-align:center;
+    line-height:1.8;
+    word-spacing:.05em;
+    widows:2;
+    orphans:2">Create interactive dashboards and visualizations using Power BI, Plotly, and Matplotlib to tell compelling data stories.</p>
+      </div>
+      <div class="grid-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 24 24" fill="none"
+          stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="grid-item-icon feather feather-pie-chart">
+          <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+          <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+        </svg>
+        <h3>Business Intelligence (BI)</h3>
+        <p style="text-align:center;
+    line-height:1.8;
+    word-spacing:.05em;
+    widows:2;
+    orphans:2">Turn data into strategic decisions with Power BI and SQL, supporting business growth and operational insights.</p>
+      </div>
+      <div class="grid-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 24 24" fill="none"
+          stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="grid-item-icon feather feather-users">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <h3>Soft Skills</h3>
+        <p style="text-align:center;
+    line-height:1.8;
+    word-spacing:.05em;
+    widows:2;
+    orphans:2">Drive effective results through strong problem solving, critical thinking, creativity, and time management skills.</p>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="content-grid">
+      <div class="grid-item project-card" data-title="Egyptian National Team Analytics"
+        data-description="Conducted a data-driven analysis of Egypt’s national football team, uncovering performance trends, opponent dynamics, and tactical evolution across 847+ international matches."
+        data-repo="https://github.com/moazelgebaly25/egypt-national-team-analytics" data-demo="" data-tech="Python">
+        <h3>Egyptian National Team Analytics</h3>
+        <p>Conducted a data-driven analysis of Egypt’s national football team, uncovering performance trends, opponent
+          dynamics, and tactical evolution across 847+ international matches.</p>
+      </div>
+      <div class="grid-item project-card" data-title="Scheduler"
+        data-description="Plan your week effortlessly with a student-focused scheduler that lets you add courses, set preferences, and generate organized, conflict-free weekly schedules tailored to your needs."
+        data-repo="https://github.com/moazelgebaly25/scheduler" data-demo="https://moazelgebaly25.github.io/scheduler/"
+        data-tech="HTML,CSS,JavaScript">
+        <h3>Scheduler</h3>
+        <p>Plan your week effortlessly with a student-focused scheduler that lets you add courses, set preferences, and
+          generate organized, conflict-free weekly schedules tailored to your needs.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact-section">
+    <h2>Get In Touch</h2>
+    <p class="cta-text">Ready to collaborate? Let's connect!</p>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name" required="">
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Your Email" required="">
+      </div>
+      <div class="form-group">
+        <input type="text" id="subject" name="subject" placeholder="Subject" required="">
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" placeholder="Your Message" required=""></textarea>
+      </div><button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
+  <div id="successModal" class="modal-overlay">
+    <div class="modal-content">
+      <p id="modalMessage"></p>
+    </div>
+  </div>
+  <div id="projectModal" class="modal-overlay">
+    <div class="modal-content project-modal-content">
+      <h3 id="projectTitle"></h3>
+      <p id="projectDescription"></p>
+      <div class="project-modal-links">
+        <a id="projectRepo" href="#" target="_blank" rel="noopener" class="project-link"><svg viewbox="0 0 24 24"
+            fill="none" stroke="currentcolor" stroke-width="2">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>Repository</a><a id="projectDemo" href="#" target="_blank" rel="noopener" class="project-link"
+          style="display:none"><svg viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>Live Demo</a>
+      </div>
+      <div id="projectTech"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
